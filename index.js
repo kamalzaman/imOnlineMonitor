@@ -32,7 +32,7 @@ const vals = argv.validator
 //Setting up the websocket
 const provider = new WsProvider(argv.node);
 //Blocks Per Session (KUSAMA)
-const bps = 2400;
+const bps = 600;
 //initialize correct sentry dsn to alert to
 //Format: https://*****************@sentry.io/*******
 const sentry = argv.dsn
