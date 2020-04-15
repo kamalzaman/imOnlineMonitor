@@ -1,3 +1,4 @@
+const { registerJoystreamTypes } = require('@joystream/types');
 const { ApiPromise, WsProvider, ApiRx } = require('@polkadot/api');
 const { DerivedSessionInfo } = require('@polkadot/api-derive/types');
 const { formatNumber } = require('@polkadot/util');
@@ -41,6 +42,9 @@ if (sentry != undefined) {
 }
 
 async function main () {
+	
+  // register types before creating the api
+  registerJoystreamTypes();
   // Create the API and wait until ready
   const api = await ApiPromise.create({
     provider: provider
